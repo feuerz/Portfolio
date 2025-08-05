@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+body {
+    font-family: 'JetBrains Mono', monospace;
+        background-color: #f2f4f8;
+    /* background-color: #354b6c; */
+    /* height: 1000vh; */
+}
+
+
+
+/* Estilos para el nav */
+#navP {
+    /* background-color: #354b6c; */
+    background-color: #f2f4f8;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 8vh;
+}
+
+/* Lista sin viñetas y horizontal */
+#navP ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    color: #354b6c;
+}
+
+/* Enlaces */
+#navP li a {
+    text-decoration: none;
+    color: #354b6c;
+    font-weight: 500;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Efecto hover */
+#navP li a:hover {
+    background-color: #5c75a3;
+    color: #f2f4f8;
+}
+
+.about-content{
+    display: flex;
+    width: 100%;
+}
+.description-wrapper{
+    width: 70%;
+}
+.skills-wrapper{
+    width: 70%;
+}
+/* Foto Name */
+/* Contenedor centrado en la pantalla */
+#photo-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    height: 90vh; 
+    text-align: center;
+    background-color: #354b6c;
+    background: linear-gradient(to bottom, #354b6c 50%, #a3a5a8 100%);
+}
+
+/* Foto grande y redonda */
+.photo {
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background-color: #f2f4f8;
+    background-image: url('img/IMG_3750\(1\).PNG'); /* Cambia por tu foto */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 20px rgba(101, 115, 142, 0.4);
+    background-position: 40% -4%;
+    background-repeat: no-repeat;
+
+}
+
+/* Nombre grande y visible */
+.name {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #f2f4f8;
+}
+.tech {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f2f4f8;
+}
+
+#nameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* SOBRE MI  */
+
+/* Sección general */
+.about-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.about-container {
+  /* background-color: lightgreen; */
+  margin: 0 auto;
+  overflow: hidden; /* Previene scroll lateral */
+}
+
+/* Títulos */
+#about-meP h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #354b6c;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* gap: 40px; */
+  justify-content: space-between;
+}
+
+/* Texto */
+.about-text {
+display: flex;
+width: 50%;
+justify-content: center;
+}
+
+.description-wrapper h3 {
+  font-size: 1.8rem;
+  color: #354b6c;
+  margin-bottom: 15px;
+}
+
+.description-wrapper p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Habilidades */
+.about-skills {
+display: flex;
+width: 50%;
+justify-content: center;
+
+}
+
+.skills-wrapper h3 {
+  font-size: 1.8rem;
+  color: #354b6c;
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.progress {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tech-logo {
+  width: 120px;
+  text-align: center;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.tech-logo img {
+  width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tech-logo:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.tech-logo p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+#stack{
+  align-items: start !important;
+}
+
+#typed {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #f2f4f8;
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+}
+
+
+
+
+.projects-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #354b6c;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background-color: #f2f4f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(53, 75, 108, 0.15);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  color: #354b6c;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(53, 75, 108, 0.25);
+}
+
+.project-card img {
+  max-width: 180px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(53, 75, 108, 0.1);
+  object-fit: contain;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+.project-card p strong {
+  color: #354b6c;
+}
+
+  .project-card {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .project-card img {
+    flex-shrink: 0;
+  }
+
+  .project-card div {
+    flex: 1;
+  }

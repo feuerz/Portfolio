@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio profesional de Manuel Manzano Fernández: proyectos de desarrollo web, diseño creativo, tecnología e innovación. Descubre su trabajo, habilidades y experiencia."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo web, programación, frontend, backend, HTML, CSS, JavaScript, React, Node.js, diseño web, portafolio, proyectos web, desarrollador, tecnología, software, innovación"
+    />
+    <title>Blog</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha384-..."
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JS y AOS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      defer
+    ></script>
+    <!-- Bootstrap Bundle con Popper.js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <!-- CSS y JS personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      defer
+      integrity="sha256-..."
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navP" data-aos="fade" data-aos-delay="200">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <section id="photo-name" data-aos="fade-up">
+      <div class="photo" data-aos="zoom-in" data-aos-delay="200"></div>
+
+      <div id="nameContainer" data-aos="fade-up" data-aos-delay="400">
+        <!-- <span class="name" data-aos="fade-right" data-aos-delay="600"
+          >Manuel Manzano</span> -->
+        <span class="name"><span id="typed"></span></span>
+
+        <span class="tech" data-aos="fade-left" data-aos-delay="1000"
+          >Desarrollador Web</span
+        >
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div id="about-meP">
+          <h2 data-aos="fade-down" data-aos-duration="1000">Sobre Mí</h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+            <div class="description-wrapper">
+              <h3>Descripción</h3>
+              <!-- <p>
+                Soy un apasionado desarrollador web con experiencia en
+                tecnologías frontend y backend. Me encanta crear soluciones
+                digitales eficientes y escalables.
+              </p> -->
+              <p>
+                Soy un desarrollador web apasionado por la tecnología y la
+                resolución de problemas. Tengo experiencia tanto en el
+                desarrollo frontend como backend, y disfruto creando soluciones
+                digitales limpias, eficientes y escalables.
+              </p>
+
+              <p>
+                Disfruto especialmente resolver bugs y optimizar código,
+                buscando siempre la mejor solución posible para cada desafío
+                técnico. Estoy en constante aprendizaje y evolución, motivado
+                por la idea de mejorar cada línea de código que escribo.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-skills" data-aos="fade-left" data-aos-delay="200">
+            <div class="skills-wrapper">
+              <h3>Habilidades</h3>
+
+              <div class="mb-3">
+                <label>PHP</label>
+                <div class="progress">
+                  <div class="progress-bar bg-primary" style="width: 80%">
+                    80%
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label>JavaScript</label>
+                <div class="progress">
+                  <div class="progress-bar bg-success" style="width: 80%">
+                    80%
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label>MY SQL</label>
+                <div class="progress">
+                  <div class="progress-bar bg-secondary" style="width: 80%">
+                    80%
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label>Java</label>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width: 70%">
+                    70%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+    <section id="stack" class="about-section">
+      <div class="about-container">
+        <h2
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          style="text-align: center; color: #354b6c"
+        >
+          Tecnologías
+        </h2>
+
+        <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+          <div class="tech-logo" data-aos="zoom-in" data-aos-delay="300">
+            <img src="img/angular-original.svg" alt="Angular" />
+            <p>
+              Angular<br /><small style="font-size: 0.8rem; color: #999"
+                >En proceso de aprendizaje</small
+              >
+            </p>
+          </div>
+
+          <div class="tech-logo" data-aos="zoom-in" data-aos-delay="500">
+            <img src="img/laravel-original.svg" alt="Laravel" />
+            <p>
+              Laravel<br /><small style="font-size: 0.8rem; color: #999"
+                >En proceso de aprendizaje</small
+              >
+            </p>
+          </div>
+
+          <div class="tech-logo" data-aos="zoom-in" data-aos-delay="700">
+            <img src="img/git-original.svg" alt="Git" />
+            <p>
+              Git<br /><small style="font-size: 0.8rem; color: #999"
+                >Nivel Intermedio</small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects-section">
+      <h2 data-aos="fade-down">Projects</h2>
+
+      <div class="projects-container">
+        <!-- Proyecto Destacado: Trabajo actual -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <img
+            src="img/logo_sl_1.gif"
+            alt="Adcore Desarrollo y Comunicación"
+          />
+          <h3>Adcore Desarrollo y Comunicación</h3>
+          <p>
+            Actualmente trabajo como desarrollador web en <strong>Adcore</strong>, donde participo en el diseño y desarrollo de aplicaciones completas, tanto en frontend como backend. Soy parte del equipo que desarrolla y mantiene los entornos de Siturweb, Sitrans y Ditgestion, colaborando en la optimización del rendimiento, la mejora de interfaces de usuario y la implementación de funcionalidades personalizadas.
+          </p>
+          <p>
+            Tecnologías:
+            <strong>PHP, Laravel, JavaScript, HTML, CSS, Git</strong>
+          </p>
+          <p>
+            Metodología: <strong>Scrum</strong>. Foco en accesibilidad,
+            rendimiento y usabilidad.
+          </p>
+        </div>
+
+        <!-- Aquí irían tus demás proyectos personales -->
+      </div>
+    </section>
+  </body>
+</html>
