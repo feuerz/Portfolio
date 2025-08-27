@@ -54,14 +54,42 @@
     />
   </head>
   <body>
-    <nav id="navP" data-aos="fade" data-aos-delay="200">
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
+    <nav id="navP" class="navbar navbar-expand-lg" data-aos-delay="200">
+      <div class="container">
+        <a class="navbar-brand" href="#">Manuel Manzano</a>
+
+        <!-- Botón hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Proyectos</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
+
     <section id="photo-name" data-aos="fade-up">
       <div class="photo" data-aos="zoom-in" data-aos-delay="200"></div>
 
@@ -70,7 +98,7 @@
           >Manuel Manzano</span> -->
         <span class="name"><span id="typed"></span></span>
 
-        <span class="tech" data-aos="fade-left" data-aos-delay="1000"
+        <span class="tech" data-aos="fade-up" data-aos-delay="1000"
           >Desarrollador Web</span
         >
       </div>
@@ -83,9 +111,9 @@
         </div>
 
         <div class="about-content">
-          <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+          <div class="about-text" data-aos="fade" data-aos-delay="200">
             <div class="description-wrapper">
-              <h3>Descripción</h3>
+              <!-- <h3>Descripción</h3> -->
               <!-- <p>
                 Soy un apasionado desarrollador web con experiencia en
                 tecnologías frontend y backend. Me encanta crear soluciones
@@ -93,65 +121,144 @@
               </p> -->
               <p>
                 Soy un desarrollador web apasionado por la tecnología y la
-                resolución de problemas. Tengo experiencia tanto en el
-                desarrollo frontend como backend, y disfruto creando soluciones
-                digitales limpias, eficientes y escalables.
+                creación de soluciones digitales. Tengo experiencia tanto en el
+                desarrollo frontend como backend, creando soluciones digitales
+                limpias, eficientes y escalables.
               </p>
 
               <p>
-                Disfruto especialmente resolver bugs y optimizar código,
-                buscando siempre la mejor solución posible para cada desafío
-                técnico. Estoy en constante aprendizaje y evolución, motivado
-                por la idea de mejorar cada línea de código que escribo.
+                Me motiva especialmente resolver bugs y optimizar código,
+                siempre en busca de la mejor solución para cada desafío técnico.
+                Estoy en constante aprendizaje y evolución, con el objetivo de
+                mejorar cada proyecto y cada línea de código que escribo.
               </p>
             </div>
           </div>
 
-          <div class="about-skills" data-aos="fade-left" data-aos-delay="200">
+          <div class="about-skills" data-aos-delay="200">
             <div class="skills-wrapper">
-              <h3>Habilidades</h3>
+              <h3 data-aos="fade-up" data-aos-delay="200">Habilidades</h3>
 
-              <div class="mb-3">
-                <label>PHP</label>
-                <div class="progress">
-                  <div class="progress-bar bg-primary" style="width: 80%">
-                    80%
-                  </div>
+              <div class="mb-3" data-aos="fade-right" data-aos-delay="300">
+                <p>Trabajo en equipo</p>
+                <div class="skills-img">
+                  <img
+                    src="img/partners-svgrepo-com.svg"
+                    alt="Trabajo en equipo"
+                  />
                 </div>
               </div>
 
-              <div class="mb-3">
-                <label>JavaScript</label>
-                <div class="progress">
-                  <div class="progress-bar bg-success" style="width: 80%">
-                    80%
-                  </div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <label>MY SQL</label>
-                <div class="progress">
-                  <div class="progress-bar bg-secondary" style="width: 80%">
-                    80%
-                  </div>
+              <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                <p>Gestión del Tiempo</p>
+                <div class="skills-img">
+                  <img
+                    src="img/timer-svgrepo-com.svg"
+                    alt="Gestión del Tiempo"
+                  />
                 </div>
               </div>
 
-              <div class="mb-3">
-                <label>Java</label>
-                <div class="progress">
-                  <div class="progress-bar bg-warning" style="width: 70%">
-                    70%
-                  </div>
+              <div class="mb-3" data-aos="fade-up" data-aos-delay="500">
+                <p>Adaptabilidad y aprendizaje</p>
+                <div class="skills-img">
+                  <img
+                    src="img/piechart-svgrepo-com.svg"
+                    alt="Adaptabilidad y aprendizaje"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3" data-aos="zoom-in" data-aos-delay="600">
+                <p>Creatividad</p>
+                <div class="skills-img">
+                  <img
+                    src="img/creativity-1-svgrepo-com.svg"
+                    alt="Creatividad"
+                  />
                 </div>
               </div>
             </div>
           </div>
-          <div></div>
+          <div class="about-container" id="tecnology">
+            <h3
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              style="text-align: center; color: #354b6c"
+            >
+              Tecnologías
+            </h3>
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+              <!-- Laravel -->
+              <div class="tech-logo" data-aos="fade-right" data-aos-delay="300">
+                <img src="img/java-original.svg" alt="Java" />
+                <p>
+                  Java<br />
+                  <small style="font-size: 0.8rem; color: #999"
+                    >Nivel Intermedio</small
+                  >
+                </p>
+              </div>
+
+              <!-- Git -->
+              <div class="tech-logo" data-aos="fade-up" data-aos-delay="400">
+                <img src="img/git-original.svg" alt="Git" />
+                <p>
+                  Git<br />
+                  <small style="font-size: 0.8rem; color: #999"
+                    >Nivel Intermedio</small
+                  >
+                </p>
+              </div>
+
+              <!-- MySql -->
+              <div class="tech-logo" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/mysql-original.svg" alt="MySql" />
+                <p>
+                  MySql<br />
+                  <small style="font-size: 0.8rem; color: #999"
+                  >Nivel Avanzado</small
+                  >
+                </p>
+              </div>
+              <!-- jQuery -->
+              <div class="tech-logo" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/jquery-original.svg" alt="JQuery" />
+                <p>
+                  jQuery<br />
+                  <small style="font-size: 0.8rem; color: #999"
+                    >Nivel Avanzado</small
+                  >
+                </p>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="tech-logo" data-aos="zoom-in" data-aos-delay="600">
+                <img src="img/javascript-original.svg" alt="JavaScript" />
+                <p>
+                  JavaScript<br />
+                  <small style="font-size: 0.8rem; color: #999"
+                    >Nivel Avanzado</small
+                  >
+                </p>
+              </div>
+
+              <!-- PHP -->
+              <div class="tech-logo" data-aos="flip-up" data-aos-delay="700">
+                <img src="img/php-original.svg" alt="PHP" />
+                <p>
+                  PHP<br />
+                  <small style="font-size: 0.8rem; color: #999"
+                    >Nivel Avanzado</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="stack" class="about-section">
+    <!-- <section id="stack" class="about-section">
       <div class="about-container">
         <h2
           data-aos="fade-down"
@@ -190,29 +297,101 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="projects" class="projects-section">
       <h2 data-aos="fade-down">Projects</h2>
 
       <div class="projects-container">
         <!-- Proyecto Destacado: Trabajo actual -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <img
-            src="img/logo_sl_1.gif"
-            alt="Adcore Desarrollo y Comunicación"
-          />
-          <h3>Adcore Desarrollo y Comunicación</h3>
-          <p>
-            Actualmente trabajo como desarrollador web en <strong>Adcore</strong>, donde participo en el diseño y desarrollo de aplicaciones completas, tanto en frontend como backend. Soy parte del equipo que desarrolla y mantiene los entornos de Siturweb, Sitrans y Ditgestion, colaborando en la optimización del rendimiento, la mejora de interfaces de usuario y la implementación de funcionalidades personalizadas.
-          </p>
-          <p>
-            Tecnologías:
-            <strong>PHP, Laravel, JavaScript, HTML, CSS, Git</strong>
-          </p>
-          <p>
-            Metodología: <strong>Scrum</strong>. Foco en accesibilidad,
-            rendimiento y usabilidad.
-          </p>
+          <div class="project-card-desc">
+            <div class="project-card-desc-parts-img">
+              <img
+                src="img/logo_sl_1.gif"
+                alt="Adcore Desarrollo y Comunicación"
+              />
+            </div>
+            <div class="project-card-desc-parts">
+              <h3>Adcore Desarrollo y Comunicación</h3>
+              <!-- </div>
+            <div class="project-card-desc-parts"> -->
+              <p>
+                Actualmente trabajo como desarrollador web en
+                <strong>Adcore</strong>, donde participo en el diseño y
+                desarrollo de aplicaciones completas, tanto en frontend como
+                backend. Soy parte del equipo que desarrolla y mantiene los
+                entornos de Siturweb, Sitrans y Ditgestion, colaborando en la
+                optimización del rendimiento, la mejora de interfaces de usuario
+                y la implementación de funcionalidades personalizadas.
+              </p>
+              <p>
+                Tecnologías:
+                <strong>PHP, Laravel, JavaScript, HTML, CSS, Git</strong>
+              </p>
+              <p>
+                Metodología: <strong>Scrum</strong>. Foco en accesibilidad,
+                rendimiento y usabilidad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-desc">
+            <div class="project-card-desc-parts-img">
+              <img
+                src="img/logo_sl_1.gif"
+                alt="Adcore Desarrollo y Comunicación"
+              />
+            </div>
+            <div class="project-card-desc-parts">
+              <h3>Adcore Desarrollo y Comunicación</h3>
+              <!-- </div>
+            <div class="project-card-desc-parts"> -->
+              <p>
+                Actualmente trabajo como desarrollador web en
+                <strong>Adcore</strong>, donde participo en el diseño y
+                desarrollo de aplicaciones completas, tanto en frontend como
+                backend. Soy parte del equipo que desarrolla y mantiene los
+                entornos de Siturweb, Sitrans y Ditgestion, colaborando en la
+                optimización del rendimiento, la mejora de interfaces de usuario
+                y la implementación de funcionalidades personalizadas.
+              </p>
+              <p>
+                Tecnologías:
+                <strong>PHP, Laravel, JavaScript, HTML, CSS, Git</strong>
+              </p>
+              <p>
+                Metodología: <strong>Scrum</strong>. Foco en accesibilidad,
+                rendimiento y usabilidad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-desc">
+            <div class="project-card-desc-parts-img">
+              <img src="img/TurtleGame.PNG" alt="Turtle Race Game" />
+            </div>
+            <div class="project-card-desc-parts">
+              <h3>Turtle Race Game</h3>
+              <!-- </div>
+            <div class="project-card-desc-parts"> -->
+              <p>
+                Un proyecto interactivo desarrollado con HTML, CSS y JavaScript,
+                en el que cuatro tortugas compiten en una carrera hasta la meta.
+                Este ejercicio, además de ser entretenido, está orientado a
+                demostrar el uso de lógica de programación asincrónica en
+                JavaScript mediante setTimeout y setInterval, control de
+                animaciones y manejo de eventos. Se trata de un ejemplo sencillo
+                pero didáctico que refleja la capacidad de integrar dinámica
+                visual con conceptos fundamentales de programación.
+              </p>
+              <p>
+                Tecnologías:
+                <strong>JavaScript, HTML, CSS, Git</strong>
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Aquí irían tus demás proyectos personales -->
