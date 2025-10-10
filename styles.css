@@ -1,149 +1,155 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;   /* hace que el scroll vaya despacio */
+  scroll-padding-top: 50px; /* deja un espacio de 200px por arriba */
+}
 body {
-    font-family: 'JetBrains Mono', monospace;
-        background-color: #f2f4f8;
-    /* background-color: #354b6c; */
-    /* height: 1000vh; */
+  font-family: "JetBrains Mono", monospace;
+  background-color: #f2f4f8;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-
-
-/* Estilos para el nav */
+/* NAV */
 #navP {
-    /* background-color: #354b6c; */
-    background-color: #f2f4f8;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 8vh;
+  background-color: #f2f4f8;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
-/* Lista sin viñetas y horizontal */
 #navP ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.3rem;
-    color: #354b6c;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  color: #354b6c;
 }
 
-/* Enlaces */
 #navP li a {
-    text-decoration: none;
-    color: #354b6c;
-    font-weight: 500;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-    border-radius: 8px;
-    cursor: pointer;
+  text-decoration: none;
+  color: #354b6c;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.navbar-brand {
+  color: #354b6c !important;
+  cursor: pointer;
+  display: none;
 }
 
-/* Efecto hover */
 #navP li a:hover {
-    background-color: #5c75a3;
-    color: #f2f4f8;
+  background-color: #5c75a3;
+  color: #f2f4f8;
 }
 
-.about-content{
-    display: flex;
-    width: 100%;
-}
-.description-wrapper{
-    width: 70%;
-}
-.skills-wrapper{
-    width: 70%;
-}
-/* Foto Name */
-/* Contenedor centrado en la pantalla */
+/* HERO */
 #photo-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.5rem;
-    height: 90vh; 
-    text-align: center;
-    background-color: #354b6c;
-    background: linear-gradient(to bottom, #354b6c 50%, #a3a5a8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  height: 90vh;
+  text-align: center;
+  background: linear-gradient(to bottom, #354b6c 50%, #a3a5a8 100%);
 }
 
-/* Foto grande y redonda */
 .photo {
-    width: 480px;
-    height: 480px;
-    border-radius: 50%;
-    background-color: #f2f4f8;
-    background-image: url('img/IMG_3750\(1\).PNG'); /* Cambia por tu foto */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 8px 20px rgba(101, 115, 142, 0.4);
-    background-position: 40% -4%;
-    background-repeat: no-repeat;
-
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background-color: #f2f4f8;
+  background-image: url("img/IMG_3750\(1\).PNG");
+  background-size: cover;
+  background-position: 40% -4%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 20px rgba(101, 115, 142, 0.4);
+  max-width: 100%;
 }
 
-/* Nombre grande y visible */
 .name {
-    font-size: 5rem;
-    font-weight: 700;
-    color: #f2f4f8;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #f2f4f8;
 }
 .tech {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #f2f4f8;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f2f4f8;
+}
+#nameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#typed {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #f2f4f8;
+  font-family: "JetBrains Mono", monospace;
+  white-space: nowrap;
 }
 
-#nameContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-/* SOBRE MI  */
-
-/* Sección general */
+/* SOBRE MI */
 .about-section {
-  padding: 60px 20px;
+  padding: 100px 20px 0px 20px; /* corregido: simétrico en los lados */
   background-color: #ffffff;
 }
 
 .about-container {
-  /* background-color: lightgreen; */
-  margin: 0 auto;
-  overflow: hidden; /* Previene scroll lateral */
+  /* margin: 0 auto;
+  overflow: hidden;
+  max-width: 1200px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.about-container h3 {
+  font-size: 1.8rem;
+  color: #354b6c;
+  margin-bottom: 20px;
 }
 
-/* Títulos */
-#about-meP h2 {
+/* Títulos unificados en sobre mí */
+.about-section h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #354b6c;
   margin-bottom: 40px;
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .about-content {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* gap: 40px; */
   justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 /* Texto */
 .about-text {
-display: flex;
-width: 50%;
-justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
 }
 
 .description-wrapper h3 {
@@ -156,14 +162,21 @@ justify-content: center;
   font-size: 1.2rem;
   color: #666;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Habilidades */
 .about-skills {
-display: flex;
-width: 50%;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .skills-wrapper h3 {
@@ -173,23 +186,47 @@ justify-content: center;
 }
 
 .mb-3 {
-  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 50%;
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
+.mb-3 p {
+  font-size: 1.2rem;
+  color: #354b6c;
+  margin: 0;
+}
+
+.skills-img {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+.skills-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Progreso (si lo usas de nuevo) */
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
   color: #333;
 }
-
 .progress {
   background-color: #e9ecef;
   border-radius: 5px;
   overflow: hidden;
   height: 20px;
 }
-
 .progress-bar {
   height: 100%;
   color: #fff;
@@ -198,6 +235,8 @@ label {
   font-size: 0.85rem;
   white-space: nowrap;
 }
+
+/* GRID de logos tech */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -205,14 +244,12 @@ label {
   gap: 2rem;
   margin-top: 2rem;
 }
-
 .tech-logo {
-  width: 120px;
+  width: 200px;
   text-align: center;
   cursor: default;
   transition: transform 0.3s ease;
 }
-
 .tech-logo img {
   width: 100%;
   max-height: 80px;
@@ -220,46 +257,32 @@ label {
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
-
 .tech-logo:hover img {
   filter: grayscale(0%);
   transform: scale(1.1);
 }
-
 .tech-logo p {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #555;
 }
-#stack{
+#stack {
   align-items: start !important;
 }
 
-#typed {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #f2f4f8;
-  font-family: 'JetBrains Mono', monospace;
-  white-space: nowrap;
-}
-
-
-
-
+/* PROYECTOS */
 .projects-section {
-  padding: 60px 20px;
+  padding: 70px 20px 0px 20px; /* corregido: simétrico en los lados */
   background-color: #ffffff;
 }
-
 .projects-section h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #354b6c;
   margin-bottom: 40px;
   font-weight: 700;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
-
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -267,7 +290,6 @@ label {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .project-card {
   background-color: #f2f4f8;
   border-radius: 12px;
@@ -278,51 +300,178 @@ label {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   color: #354b6c;
 }
-
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(53, 75, 108, 0.25);
 }
-
 .project-card img {
-  max-width: 180px;
+  max-width: 350px;
   margin-bottom: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(53, 75, 108, 0.1);
   object-fit: contain;
 }
-
 .project-card h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-
 .project-card p {
   font-size: 1.2rem;
   line-height: 1.5;
   color: #555;
-  max-width: 700px;
   margin-bottom: 1rem;
 }
-
 .project-card p strong {
   color: #354b6c;
 }
+.project-card {
+  text-align: left;
+  gap: 2rem;
+}
+.project-card img {
+  flex-shrink: 0;
+}
+.project-card-desc {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.project-card-desc-parts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+.project-card-desc-parts-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
 
-  .project-card {
-    flex-direction: row;
+/* RESPONSIVE */
+/* EXTRA RESPONSIVE PARA MÓVIL */
+@media (max-width: 600px) {
+  html {
+    scroll-behavior: smooth; /* hace que el scroll vaya despacio */
+    scroll-padding-top: 270px; /* deja un espacio de 200px por arriba */
+  }
+  /* NAV */
+  #navP {
+    padding: 0.5rem 1rem;
+    /* height: 1º0vh; */
+  }
+  #navP ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  #navP li a {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  /* HERO */
+  #photo-name {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 65vh;
+    padding: 2rem 1rem;
+  }
+  .photo {
+    width: 220px;
+    height: 220px;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  #typed {
+    font-size: 2rem;
+  }
+  .tech {
+    font-size: 1rem;
+  }
+
+  /* SOBRE MÍ */
+  .about-section {
+    padding: 60px 15px 30px 15px;
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  .description-wrapper p {
+    font-size: 1rem;
+    line-height: 1.4;
     text-align: left;
-    gap: 2rem;
+  }
+  .description-wrapper{
+    width: 100%;
   }
 
+  .mb-3 {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  .mb-3 p {
+    font-size: 1rem;
+  }
+  .skills-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* GRID de logos tech */
+  .skills-grid {
+    gap: 1rem;
+  }
+  .tech-logo {
+    width: 45%;
+  }
+  .tech-logo p {
+    font-size: 0.8rem;
+  }
+
+  /* PROYECTOS */
+  .projects-section {
+    padding: 40px 15px;
+  }
+  .projects-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  .project-card {
+    padding: 1.2rem;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+  }
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+  .project-card p {
+    font-size: 1rem;
+  }
   .project-card img {
-    flex-shrink: 0;
+    max-width: 100%;
   }
-
-  .project-card div {
-    flex: 1;
+  .project-card-desc {
+    flex-direction: column;
   }
+  .project-card-desc-parts,
+  .project-card-desc-parts-img {
+    width: 100%;
+  }
+  .navbar-brand {
+    display: block;
+  }
+  .about-text{
+     background-color: #f2f4f8
+  }
+}
