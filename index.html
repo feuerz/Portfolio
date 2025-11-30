@@ -25,7 +25,6 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha384-..."
       crossorigin="anonymous"
     />
     <!-- Bootstrap JS y AOS -->
@@ -44,7 +43,6 @@
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       defer
-      integrity="sha256-..."
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -54,24 +52,27 @@
     />
   </head>
   <body>
-    <nav id="navP" class="navbar navbar-expand-lg" data-aos-delay="200">
+    <nav id="navP" class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">Manuel Manzano</a>
-
-        <!-- Botón hamburguesa -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú -->
+        <div class="d-flex align-items-center gap-3">
+          <label class="theme-switch m-0" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+          <button
+            class="navbar-toggler m-0 p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <!-- MENÚ -->
         <div
           class="collapse navbar-collapse justify-content-center"
           id="navbarNav"
@@ -89,345 +90,443 @@
             </li>
           </ul>
         </div>
-        <button id="theme-toggle">🌙</button>
-
       </div>
     </nav>
+    <main>
+      <section id="photo-name" data-aos="fade-up">
+        <div
+          class="photo"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          role="img"
+          aria-label="Foto de Manuel Manzano"
+        ></div>
 
-    <section id="photo-name" data-aos="fade-up">
-      <div class="photo" data-aos="zoom-in" data-aos-delay="200"></div>
-
-      <div id="nameContainer" data-aos="fade-up" data-aos-delay="400">
-        <!-- <span class="name" data-aos="fade-right" data-aos-delay="600"
+        <div id="nameContainer" data-aos="fade-up" data-aos-delay="400">
+          <!-- <span class="name" data-aos="fade-right" data-aos-delay="600"
           >Manuel Manzano</span> -->
-        <span class="name"><span id="typed"></span></span>
+          <span class="name"><span id="typed"></span></span>
 
-        <span class="tech" data-aos="fade-up" data-aos-delay="1000"
-          >Desarrollador Web</span
-        >
-      </div>
-    </section>
-
-    <section id="about" class="about-section">
-      <div class="about-container">
-        <div id="about-meP">
-          <h2 data-aos="fade-down" data-aos-duration="1000">Sobre Mí</h2>
+          <span class="tech" data-aos="fade-up" data-aos-delay="1000"
+            >Desarrollador Web</span
+          >
         </div>
+      </section>
 
-        <div class="about-content">
-          <div class="about-text" data-aos="fade" data-aos-delay="200">
-            <div class="description-wrapper">
-              <!-- <h3>Descripción</h3> -->
-              <!-- <p>
+      <section id="about" class="about-section">
+        <div class="about-container">
+          <div id="about-meP">
+            <h2 data-aos="fade-down" data-aos-duration="1000">Sobre Mí</h2>
+          </div>
+
+          <div class="about-content">
+            <div class="about-text" data-aos="fade" data-aos-delay="200">
+              <div class="description-wrapper">
+                <!-- <h3>Descripción</h3> -->
+                <!-- <p>
                 Soy un apasionado desarrollador web con experiencia en
                 tecnologías frontend y backend. Me encanta crear soluciones
                 digitales eficientes y escalables.
               </p> -->
-              <p>
-                Soy un desarrollador web apasionado por la tecnología y la
-                creación de soluciones digitales. Tengo experiencia tanto en el
-                desarrollo frontend como backend, creando soluciones digitales
-                limpias, eficientes y escalables.
-              </p>
-
-              <p>
-                Me motiva especialmente resolver bugs y optimizar código,
-                siempre en busca de la mejor solución para cada desafío técnico.
-                Estoy en constante aprendizaje y evolución, con el objetivo de
-                mejorar cada proyecto y cada línea de código que escribo.
-              </p>
-            </div>
-          </div>
-
-          <div class="about-skills" data-aos-delay="200">
-            <div class="skills-wrapper">
-              <h3 data-aos="fade-up" data-aos-delay="200">Habilidades</h3>
-
-              <div class="mb-3 box" data-aos="fade-right" data-aos-delay="300">
-                <p>Trabajo en equipo</p>
-                <div class="skills-img">
-                  <img
-                    src="img/partners-svgrepo-com.svg"
-                    alt="Trabajo en equipo"
-                  />
-                </div>
-              </div>
-
-              <div class="mb-3 box" data-aos="fade-up" data-aos-delay="400">
-                <p>Gestión del Tiempo</p>
-                <div class="skills-img">
-                  <img
-                    src="img/timer-svgrepo-com.svg"
-                    alt="Gestión del Tiempo"
-                  />
-                </div>
-              </div>
-
-              <div class="mb-3 box" data-aos="fade-up" data-aos-delay="500">
-                <p>Adaptabilidad y aprendizaje</p>
-                <div class="skills-img">
-                  <img
-                    src="img/piechart-svgrepo-com.svg"
-                    alt="Adaptabilidad y aprendizaje"
-                  />
-                </div>
-              </div>
-
-              <div class="mb-3 box" data-aos="zoom-in" data-aos-delay="600">
-                <p>Creatividad</p>
-                <div class="skills-img">
-                  <img
-                    src="img/creativity-1-svgrepo-com.svg"
-                    alt="Creatividad"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="about-container" id="tecnology">
-            <h3
-              data-aos="fade-down"
-              data-aos-duration="1000"
-            >
-              Tecnologías
-            </h3>
-            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
-              <!-- Laravel -->
-              <div class="tech-logo" data-aos="fade-right" data-aos-delay="300">
-                <img src="img/java-original.svg" alt="Java" />
                 <p>
-                  Java<br />
-                  <small style="font-size: 0.8rem; color: #999"
-                    >Nivel Intermedio</small
-                  >
+                  Soy un desarrollador web apasionado por la tecnología y la
+                  creación de soluciones digitales. Tengo experiencia tanto en
+                  el desarrollo frontend como backend, creando soluciones
+                  digitales limpias, eficientes y escalables.
                 </p>
-              </div>
 
-              <!-- Git -->
-              <div class="tech-logo" data-aos="fade-up" data-aos-delay="400">
-                <img src="img/git-original.svg" alt="Git" />
                 <p>
-                  Git<br />
-                  <small style="font-size: 0.8rem; color: #999"
-                    >Nivel Intermedio</small
-                  >
-                </p>
-              </div>
-
-              <!-- MySql -->
-              <div class="tech-logo" data-aos="fade-up" data-aos-delay="500">
-                <img src="img/mysql-original.svg" alt="MySql" />
-                <p>
-                  MySql<br />
-                  <small style="font-size: 0.8rem; color: #999"
-                    >Nivel Avanzado</small
-                  >
-                </p>
-              </div>
-              <!-- jQuery -->
-              <div class="tech-logo" data-aos="fade-up" data-aos-delay="500">
-                <img src="img/jquery-original.svg" alt="JQuery" />
-                <p>
-                  jQuery<br />
-                  <small style="font-size: 0.8rem; color: #999"
-                    >Nivel Avanzado</small
-                  >
-                </p>
-              </div>
-
-              <!-- JavaScript -->
-              <div class="tech-logo" data-aos="zoom-in" data-aos-delay="600">
-                <img src="img/javascript-original.svg" alt="JavaScript" />
-                <p>
-                  JavaScript<br />
-                  <small style="font-size: 0.8rem; color: #999"
-                    >Nivel Avanzado</small
-                  >
-                </p>
-              </div>
-
-              <!-- PHP -->
-              <div class="tech-logo" data-aos="flip-up" data-aos-delay="700">
-                <img src="img/php-original.svg" alt="PHP" />
-                <p>
-                  PHP<br />
-                  <small style="font-size: 0.8rem; color: #999"
-                    >Nivel Avanzado</small
-                  >
+                  Me motiva especialmente resolver bugs y optimizar código,
+                  siempre en busca de la mejor solución para cada desafío
+                  técnico. Estoy en constante aprendizaje y evolución, con el
+                  objetivo de mejorar cada proyecto y cada línea de código que
+                  escribo.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="projects" class="projects-section">
-      <h2 data-aos="fade-down">Proyectos</h2>
+            <div class="about-skills" data-aos-delay="200">
+              <div class="skills-wrapper">
+                <h3 data-aos="fade-up" data-aos-delay="200">Habilidades</h3>
 
-      <div class="projects-container">
-        <!-- Proyecto Destacado: Trabajo actual -->
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-card-desc">
-            <div class="project-card-desc-parts-img">
-              <img
-                src="img/logo_sl_1.gif"
-                alt="Adcore Desarrollo y Comunicación"
-              />
-            </div>
-            <div class="project-card-desc-parts">
-              <h3>Adcore Desarrollo y Comunicación</h3>
-              <!-- </div>
-            <div class="project-card-desc-parts"> -->
-              <p>
-                Actualmente trabajo como desarrollador web en
-                <strong>Adcore</strong>, donde participo en el diseño y
-                desarrollo de aplicaciones completas, tanto en frontend como
-                backend. Soy parte del equipo que desarrolla y mantiene los
-                entornos de Siturweb, Sitrans y Ditgestion, colaborando en la
-                optimización del rendimiento, la mejora de interfaces de usuario
-                y la implementación de funcionalidades personalizadas.
-              </p>
-              <p>
-                Tecnologías:
-                <strong>PHP, Laravel, JavaScript, HTML, CSS, Git</strong>
-              </p>
-              <p>
-                Metodología: <strong>Scrum</strong>. Foco en accesibilidad,
-                rendimiento y usabilidad.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-card-desc">
-            <div class="project-card-desc-parts-img">
-              <img
-                src="img/LogoFondo-01.png"
-                alt="Adcore Desarrollo y Comunicación"
-              />
-            </div>
-            <div class="project-card-desc-parts">
-              <h3>Encinar & Manzano – Web + Panel de Control</h3>
-              <!-- </div>
-            <div class="project-card-desc-parts"> -->
-              <p>
-                Desarrollo de una plataforma completa compuesta por una web
-                corporativa totalmente dinámica y un panel de control interno.
-                El cliente puede gestionar servicios, proyectos, imágenes del
-                carrusel y todo el contenido visible en el frontend. Además, el
-                panel interno permite administrar usuarios y roles, gestionar el
-                CRM, controlar fichajes y realizar tareas de facturación,
-                ofreciendo una solución centralizada y flexible para la
-                operativa diaria de la empresa.
-              </p>
-              <p>Tecnologías: <strong>JQuery, PHP, MySQL, HTML, CSS</strong></p>
-              <p>
-                URL:
-                <strong
-                  ><a href="https://www.encinarmanzano.es" target="_blank"
-                    >Clic Aquí</a
-                  ></strong
+                <div
+                  class="mb-3 box"
+                  data-aos="fade-right"
+                  data-aos-delay="300"
                 >
-                GITHUB:
-                <strong
-                  ><a href="https://www.encinarmanzano.es" target="_blank"
-                    >Clic Aquí</a
-                  ></strong
+                  <p>Trabajo en equipo</p>
+                  <div class="skills-img">
+                    <img
+                      src="img/partners-svgrepo-com.svg"
+                      alt="Trabajo en equipo"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 box" data-aos="fade-up" data-aos-delay="400">
+                  <p>Gestión del Tiempo</p>
+                  <div class="skills-img">
+                    <img
+                      src="img/timer-svgrepo-com.svg"
+                      alt="Gestión del Tiempo"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 box" data-aos="fade-up" data-aos-delay="500">
+                  <p>Adaptabilidad y aprendizaje</p>
+                  <div class="skills-img">
+                    <img
+                      src="img/piechart-svgrepo-com.svg"
+                      alt="Adaptabilidad y aprendizaje"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 box" data-aos="zoom-in" data-aos-delay="600">
+                  <p>Creatividad</p>
+                  <div class="skills-img">
+                    <img
+                      src="img/creativity-1-svgrepo-com.svg"
+                      alt="Creatividad"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-container" id="tecnology">
+              <h3 data-aos="fade-down" data-aos-duration="1000">Tecnologías</h3>
+              <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Laravel -->
+                <div
+                  class="tech-logo"
+                  data-aos="fade-right"
+                  data-aos-delay="300"
                 >
-              </p>
+                  <img src="img/java-original.svg" alt="Java" />
+                  <p>Java<br /></p>
+                </div>
+
+                <!-- Git -->
+                <div class="tech-logo" data-aos="fade-up" data-aos-delay="400">
+                  <img src="img/git-original.svg" alt="Git" />
+                  <p>Git<br /></p>
+                </div>
+
+                <!-- MySql -->
+                <div class="tech-logo" data-aos="fade-up" data-aos-delay="500">
+                  <img src="img/mysql-original.svg" alt="MySql" />
+                  <p>MySql<br /></p>
+                </div>
+                <!-- jQuery -->
+                <div class="tech-logo" data-aos="fade-up" data-aos-delay="500">
+                  <img src="img/jquery-original.svg" alt="JQuery" />
+                  <p>jQuery<br /></p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-logo" data-aos="zoom-in" data-aos-delay="600">
+                  <img src="img/javascript-original.svg" alt="JavaScript" />
+                  <p>JavaScript<br /></p>
+                </div>
+
+                <!-- PHP -->
+                <div class="tech-logo" data-aos="flip-up" data-aos-delay="700">
+                  <img src="img/php-original.svg" alt="PHP" />
+                  <p>PHP<br /></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-card-desc">
-            <div class="project-card-desc-parts-img">
-              <img src="img/TurtleGame.PNG" alt="Turtle Race Game" />
-            </div>
-            <div class="project-card-desc-parts">
-              <h3>Turtle Race Game</h3>
-              <!-- </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <h2 data-aos="fade-down">Proyectos</h2>
+
+        <div class="projects-container">
+          <!-- Proyecto Destacado: Trabajo actual -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-desc">
+              <div class="project-card-desc-parts-img">
+                <img
+                  src="img/logo_sl_1.gif"
+                  alt="Adcore Desarrollo y Comunicación"
+                />
+              </div>
+              <div class="project-card-desc-parts">
+                <h3>Adcore Desarrollo y Comunicación</h3>
+                <!-- </div>
             <div class="project-card-desc-parts"> -->
-              <p>
-                Proyecto web interactivo desarrollado con HTML, CSS y
-                JavaScript, en el que cuatro tortugas compiten en una carrera
-                mediante animaciones controladas por lógica asincrónica. El
-                ejercicio demuestra el uso de <code>setTimeout</code> y
-                <code>setInterval</code> para gestionar tiempos y
-                actualizaciones periódicas, así como la manipulación del DOM, el
-                control de eventos y la sincronización de movimientos en
-                pantalla. <br /><br />
-                La visualización en dispositivos móviles aún no está
-                completamente optimizada, ya que se encuentra en proceso de
-                implementación de reglas responsivas y ajustes de layout para
-                mejorar la experiencia en pantallas reducidas.
-              </p>
-              <p>
-                Tecnologías:
-                <strong>JavaScript, HTML, CSS, Git</strong>
-              </p>
-              <p>
-                GITHUB:
-                <strong
-                  ><a href="https://github.com/feuerz/Kart-Game" target="_blank"
-                    >Clic Aquí</a
-                  ></strong
-                >
-              </p>
+                <p>
+                  Actualmente trabajo como desarrollador web en
+                  <strong>Adcore</strong>, donde participo en el diseño y
+                  desarrollo de aplicaciones completas, tanto en frontend como
+                  backend. Soy parte del equipo que desarrolla y mantiene los
+                  entornos de Siturweb, Sitrans y Ditgestion, colaborando en la
+                  optimización del rendimiento, la mejora de interfaces de
+                  usuario y la implementación de funcionalidades personalizadas.
+                </p>
+                <p>
+                  Tecnologías:
+                  <strong>PHP, Laravel, JavaScript, HTML, CSS, Git</strong>
+                </p>
+                <p>
+                  Metodología: <strong>Scrum</strong>. Foco en accesibilidad,
+                  rendimiento y usabilidad.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-desc">
+              <div class="project-card-desc-parts-img">
+                <img
+                  src="img/LogoFondo-01.png"
+                  alt="Adcore Desarrollo y Comunicación"
+                />
+              </div>
+              <div class="project-card-desc-parts">
+                <h3>Encinar & Manzano – Web + Panel de Control</h3>
+                <!-- </div>
+            <div class="project-card-desc-parts"> -->
+                <p>
+                  Desarrollo de una plataforma completa compuesta por una web
+                  corporativa totalmente dinámica y un panel de control interno.
+                  El cliente puede gestionar servicios, proyectos, imágenes del
+                  carrusel y todo el contenido visible en el frontend. Además,
+                  el panel interno permite administrar usuarios y roles,
+                  gestionar el CRM, controlar fichajes y realizar tareas de
+                  facturación, ofreciendo una solución centralizada y flexible
+                  para la operativa diaria de la empresa.
+                </p>
+                <p>
+                  Tecnologías: <strong>JQuery, PHP, MySQL, HTML, CSS</strong>
+                </p>
+                <p>
+                  URL:
+                  <strong
+                    ><a
+                      href="https://www.encinarmanzano.es"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Clic Aquí</a
+                    ></strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-desc">
+              <div class="project-card-desc-parts-img">
+                <img src="img/TurtleGame.PNG" alt="Turtle Race Game" />
+              </div>
+              <div class="project-card-desc-parts">
+                <h3>Turtle Race Game</h3>
+                <!-- </div>
+            <div class="project-card-desc-parts"> -->
+                <p>
+                  Proyecto web interactivo desarrollado con HTML, CSS y
+                  JavaScript, en el que cuatro tortugas compiten en una carrera
+                  mediante animaciones controladas por lógica asincrónica. El
+                  ejercicio demuestra el uso de <code>setTimeout</code> y
+                  <code>setInterval</code> para gestionar tiempos y
+                  actualizaciones periódicas, así como la manipulación del DOM,
+                  el control de eventos y la sincronización de movimientos en
+                  pantalla. <br /><br />
+                  La visualización en dispositivos móviles aún no está
+                  completamente optimizada, ya que se encuentra en proceso de
+                  implementación de reglas responsivas y ajustes de layout para
+                  mejorar la experiencia en pantallas reducidas.
+                </p>
+                <p>
+                  Tecnologías:
+                  <strong>JavaScript, HTML, CSS, Git</strong>
+                </p>
+                <p>
+                  GITHUB:
+                  <strong
+                    ><a
+                      href="https://github.com/feuerz/Kart-Game"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Clic Aquí</a
+                    ></strong
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card-desc">
+              <div class="project-card-desc-parts-img">
+                <img src="img/logo_tot2.jpg" alt="Turtle Race Game" />
+              </div>
+              <div class="project-card-desc-parts">
+                <h3>ToT - Web Minijobs Locales</h3>
+                <!-- </div>
+            <div class="project-card-desc-parts"> -->
+                <p>
+                  Proyecto Final de DAW: plataforma web que conecta a usuarios
+                  para realizar miniJobs locales. Permite publicar tareas,
+                  gestionar perfiles, enviar valoraciones y manejar imágenes de
+                  forma segura. Desarrollada con PHP, MySQL, JavaScript, HTML y
+                  CSS, y adaptada con un diseño totalmente responsive para
+                  móvil, tablet y escritorio.
+                </p>
+                <p>
+                  Tecnologías:
+                  <strong>PHP,JavaScript, HTML, CSS</strong>
+                </p>
+                <p>
+                  GITHUB:
+                  <strong
+                    ><a
+                      href="https://github.com/feuerz/ToT"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Clic Aquí</a
+                    ></strong
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contacto" class="contacto-section">
-      <h2 data-aos="fade-down">Contacto</h2>
-      <!-- <h2>Contacto</h2> -->
-      <div class="description-wrapper">
-        <p>
-          Disponible para nuevas oportunidades y proyectos. Si deseas ponerte en
-          contacto conmigo, aquí tienes mis canales profesionales.
-        </p>
-      </div>
-      <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
-        <!-- Linkedin -->
+      </section>
+      <section id="contacto" class="contacto-section">
+        <h2 data-aos="fade-down">Contacto</h2>
+        <!-- <h2>Contacto</h2> -->
+        <div data-aos="fade-down" class="description-wrapper">
+          <p>
+            Disponible para nuevas oportunidades y proyectos. Si deseas ponerte
+            en contacto conmigo, aquí tienes mis canales profesionales.
+          </p>
+        </div>
         <div
-          class="tech-logo contact-logo"
-          data-aos="fade-right"
-          data-aos-delay="300"
+          class="skills-grid logosContact"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
-          <a
-            href="https://www.linkedin.com/in/manuel-manzano-progr"
-            target="_blank"
+          <!-- Linkedin -->
+          <div
+            class="tech-logo contact-logo"
+            data-aos="fade-right"
+            data-aos-delay="300"
           >
-            <img src="img/linkedin-svgrepo-com.svg" alt="linkedin" />
-          </a>
-          <p>Linkedin</p>
+            <a
+              href="https://www.linkedin.com/in/manuel-manzano-progr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="img/linkedin-svgrepo-com.svg" alt="linkedin" />
+            </a>
+            <p>Linkedin</p>
+          </div>
+
+          <!-- GitHub -->
+          <div
+            class="tech-logo contact-logo"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <a
+              href="https://github.com/feuerz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="img/github-color-svgrepo-com.svg" alt="Git" />
+            </a>
+            <p>GitHub</p>
+          </div>
+
+          <!-- Email -->
+          <div
+            class="tech-logo contact-logo"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <a href="mailto:mmanzano1993@gmail.com">
+              <img src="img/gmail-svgrepo-com.svg" alt="MySql" />
+            </a>
+            <p>Email</p>
+          </div>
+        </div>
+        <div data-aos="fade-down" class="description-wrapper">
+          <p>
+            También puedes descargar mi CV por si quieres echarle un vistazo.
+          </p>
+        </div>
+        <!-- DRIVE -->
+        <div
+          class="skills-grid logosContact"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div
+            class="tech-logo contact-logo"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <a
+              href="https://drive.google.com/file/d/1Xjp-_gzhN3OlcNH79ALF35MyIhCdhMTJ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="img/google-drive-svgrepo-com.svg" alt="MySql" />
+            </a>
+            <p>CV</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Portafolio de <strong>Manuel Manzano</strong></h3>
+          <p>Hecho con ❤️</p>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
         </div>
 
-        <!-- GitHub -->
-        <div
-          class="tech-logo contact-logo"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <a href="https://github.com/feuerz" target="_blank">
-            <img src="img/github-color-svgrepo-com.svg" alt="Git" />
-          </a>
-          <p>GitHub</p>
-        </div>
-
-        <!-- Email -->
-        <div
-          class="tech-logo contact-logo"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
-          <a href="mailto:mmanzano1993@gmail.com">
-            <img src="img/gmail-svgrepo-com.svg" alt="MySql" />
-          </a>
-          <p>Email</p>
+        <div class="footer-section">
+          <h4>Sígueme</h4>
+          <p>
+            <a
+              href="https://www.instagram.com/feuerz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+            |
+            <a
+              href="https://www.linkedin.com/in/manuel-manzano-progr"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Linkedin</a
+            >
+            |
+            <a
+              href="https://github.com/feuerz"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </p>
         </div>
       </div>
-    </section>
+
+      <p class="footer-copy">
+        © 2025 Manuel Manzano — Todos los derechos reservados.
+      </p>
+    </footer>
   </body>
 </html>

@@ -5,8 +5,9 @@
   --text-dark: #333;
   --cards: #f8f9fa;
   --text-ligh: #666;
-  --gradiantA: #354b6c;;
-  --gradiant: #a3a5a8;
+  --gradiantA: #354b6c;
+  --gradiant: #f2f4f8;
+  /* --gradiant: #a3a5a8; */
 }
 body.dark {
   --primary: #8ab4f8;
@@ -15,22 +16,20 @@ body.dark {
   --text-dark: #e8e8e8;
   --cards: #12305c;
   --text-ligh: #cccccc;
-  --gradiantA: #12305c;  /* ⭐ NUEVO */
-  --gradiant: #0b1e3b;  /* ⭐ NUEVO */
+  --gradiantA: #12305c; /* ⭐ NUEVO */
+  --gradiant: #0b1e3b; /* ⭐ NUEVO */
 }
 *,
 *::before,
 *::after {
-  transition: background-color 0.4s ease, 
-              color 0.4s ease,
-              border-color 0.4s ease,
-              box-shadow 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .theme-transition {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
 }
-
 
 * {
   box-sizing: border-box;
@@ -59,6 +58,74 @@ body {
   top: 0;
   z-index: 9999;
 }
+/* SWITCH TEMA MINIMAL */
+.theme-switch {
+  position: relative;
+  width: 55px;
+  height: 28px;
+  display: inline-block;
+}
+
+.theme-switch input {
+  display: none;
+}
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--primary-light);
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  top: 3px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Activo */
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:checked + .slider::before {
+  transform: translateX(27px);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23354b6c' stroke-linecap='round' stroke-width='2' d='M2 4h12M2 8h12M2 12h12'/%3E%3C/svg%3E");
+}
+body.dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23e8e8e8' stroke-linecap='round' stroke-width='2' d='M2 4h12M2 8h12M2 12h12'/%3E%3C/svg%3E");
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+.navbar-toggler {
+  border: none !important;
+  padding: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .box {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
@@ -71,7 +138,10 @@ body {
   gap: 1.3rem;
   color: var(--primary);
 }
-
+.container {
+  display: flex !important;
+  flex-direction: row-reverse;
+}
 #navP li a {
   text-decoration: none;
   color: var(--primary);
@@ -98,7 +168,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3.5rem;
-  height: 90vh;
+  height: 80vh;
   flex-wrap: wrap;
   text-align: center;
   background: linear-gradient(
@@ -129,7 +199,7 @@ body {
 .tech {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--bg);
+  color: var(--primary);
 }
 #nameContainer {
   display: flex;
@@ -288,6 +358,7 @@ label {
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
+
 .tech-logo:hover img {
   filter: grayscale(0%);
   transform: scale(1.1);
@@ -350,7 +421,8 @@ label {
   box-shadow: 0 12px 24px rgba(53, 75, 108, 0.25);
 }
 .project-card img {
-  max-width: 350px;
+  max-width: 90%;
+  max-height: 80%;
   margin-bottom: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(53, 75, 108, 0.1);
@@ -384,6 +456,7 @@ label {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .project-card-desc-parts {
   display: flex;
   justify-content: center;
@@ -414,6 +487,90 @@ label {
   align-items: center;
   flex-direction: column;
 }
+#contacto .description-wrapper:nth-of-type(3) {
+  margin-top: 40px;
+}
+
+/* FOOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to top, var(--primary) 0%, var(--gradiant) 100%);
+  color: var(--text-dark);
+  font-family: "JetBrains Mono", monospace;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Contenedor interior */
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* background-color: red; */
+}
+
+/* Secciones */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  text-align: center;
+  width: 33%;
+  /* background-color: palegoldenrod; */
+}
+
+/* Títulos coherentes con tus H3 (1.8rem) */
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Texto del footer */
+.footer-section p {
+  font-size: 1.1rem; /* similar a tus párrafos (1.2rem) */
+  color: var(--text-dark);
+}
+
+/* Primer párrafo centrado */
+.footer-section p:first-of-type {
+  text-align: center;
+}
+
+/* Lista de enlaces */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+}
+
+.footer-section ul li a {
+  font-size: 1.1rem; /* igual que los <p> para armonía */
+  color: var(--text-dark);
+  transition: 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+/* Texto final */
+.footer-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #777;
+}
+
 /* RESPONSIVE */
 /* EXTRA RESPONSIVE PARA MÓVIL */
 @media (max-width: 600px) {
@@ -423,8 +580,14 @@ label {
   }
   /* NAV */
   #navP {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     /* height: 1º0vh; */
+  }
+  .container {
+    display: flex !important;
+    flex-direction: row;
+    /* flex-wrap: nowrap !important; */
+    width: 100% !important;
   }
   #navP ul {
     flex-direction: column;
@@ -435,12 +598,28 @@ label {
     font-size: 1.3rem;
     padding: 0.5rem;
   }
+  .theme-switch {
+    width: 40px; /* antes 55px */
+    height: 20px; /* antes 28px */
+  }
+
+  .slider::before {
+    height: 16px; /* antes 22px */
+    width: 16px; /* antes 22px */
+    top: 2px; /* centrado vertical */
+    left: 2px;
+  }
+
+  /* Cuando está activado, mueve acorde al nuevo tamaño */
+  input:checked + .slider::before {
+    transform: translateX(20px); /* antes 27px */
+  }
 
   /* HERO */
   #photo-name {
     flex-direction: column;
     gap: 1.5rem;
-    height: 65vh;
+    /* height: 65vh; */
     padding: 2rem 1rem;
   }
   .photo {
@@ -468,7 +647,7 @@ label {
   .description-wrapper p {
     font-size: 1rem;
     line-height: 1.4;
-    text-align: left;
+    text-align: center;
   }
   .description-wrapper {
     width: 100%;
@@ -498,6 +677,9 @@ label {
   .tech-logo p {
     font-size: 0.8rem;
   }
+  .tech-logo img {
+    filter: grayscale(0%);
+  }
 
   /* PROYECTOS */
   .projects-section {
@@ -510,8 +692,11 @@ label {
   .project-card {
     padding: 1.2rem;
     gap: 1rem;
-    text-align: left;
+    text-align: center;
     width: 100%;
+  }
+  .projects-container {
+    padding: 0;
   }
   .project-card h3 {
     font-size: 1.3rem;
@@ -525,6 +710,14 @@ label {
   .project-card-desc {
     flex-direction: column;
   }
+
+  .project-card-desc-parts {
+    order: 1; /* texto primero */
+  }
+
+  .project-card-desc-parts-img {
+    order: 2; /* imagen después */
+  }
   .project-card-desc-parts,
   .project-card-desc-parts-img {
     width: 100%;
@@ -534,5 +727,401 @@ label {
   }
   .about-text {
     background-color: var(--bg);
+  }
+  /* CONTACTO */
+  .logosContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .contact-logo img {
+    width: 50px;
+    height: 50px;
+  }
+  /* FOOTER */
+  .footer-container {
+    justify-content: space-evenly;
+  }
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.3rem;
+  }
+  .footer-section {
+    width: 100%;
+  }
+}
+/* ================================
+   📱 TABLET VERTICAL (PORTRAIT)
+   ================================ */
+@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+  /* NAV */
+  #navP li a {
+    font-size: 1.6rem;
+  }
+  .navbar-brand {
+    display: block;
+  }
+
+  /* HERO */
+  #photo-name {
+    height: 70vh;
+    gap: 2rem;
+  }
+
+  .photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  #typed,
+  .name {
+    font-size: 4rem;
+  }
+
+  .tech {
+    font-size: 1.4rem;
+  }
+  .container {
+    flex-direction: row;
+  }
+  /* SOBRE MÍ */
+  .description-wrapper {
+    width: 80%;
+  }
+
+  .description-wrapper p {
+    font-size: 1.3rem;
+  }
+
+  /* HABILIDADES */
+  .mb-3 {
+    width: 60%;
+    padding: 12px;
+  }
+
+  .skills-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* GRID TECH */
+  .tech-logo {
+    width: 28%;
+  }
+
+  .tech-logo img {
+    max-height: 70px;
+  }
+
+  /* PROYECTOS */
+  .project-card {
+    padding: 1.8rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-card p {
+    font-size: 1.1rem;
+  }
+
+  .project-card-desc {
+    flex-direction: row;
+  }
+
+  .project-card-desc-parts,
+  .project-card-desc-parts-img {
+    width: 50%;
+  }
+
+  /* CONTACTO */
+
+  .contact-logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .logosContact {
+    flex-wrap: nowrap;
+  }
+  .logosContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  /* FOOTER */
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.6rem;
+  }
+
+  .footer-section p {
+    font-size: 1.2rem;
+  }
+}
+
+/* ================================
+   📱 TABLET HORIZONTAL (LANDSCAPE)
+   ================================ */
+@media screen and (min-width: 600px) and (max-width: 1259px) and (orientation: landscape) {
+  /* NAV */
+  #navP li a {
+    font-size: 1.6rem;
+  }
+/* .navbar-brand {
+    display: block;
+  } */
+  .container {
+    flex-direction: row-reverse;
+  }
+  /* HERO */
+  #photo-name {
+    flex-direction: row;
+    height: 80vh;
+    gap: 3rem;
+  }
+
+  .photo {
+    width: 260px;
+    height: 260px;
+  }
+  .logosContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  #typed,
+  .name {
+    font-size: 3.8rem;
+  }
+
+  .tech {
+    font-size: 1.4rem;
+  }
+
+  /* SOBRE MÍ */
+  .description-wrapper {
+    width: 70%;
+  }
+
+  .description-wrapper p {
+    font-size: 1.2rem;
+  }
+
+  /* HABILIDADES */
+  .mb-3 {
+    width: 50%;
+    padding: 15px;
+    flex-direction: row;
+  }
+
+  .skills-img {
+    width: 85px;
+    height: 85px;
+  }
+
+  /* GRID TECH */
+  .tech-logo {
+    width: 22%;
+  }
+
+  .tech-logo img {
+    max-height: 75px;
+  }
+
+  /* PROYECTOS */
+  .project-card {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.9rem;
+  }
+
+  .project-card p {
+    font-size: 1.1rem;
+  }
+
+  .project-card-desc {
+    flex-direction: row;
+  }
+
+  .project-card img {
+    max-width: 85%;
+  }
+
+  .project-card-desc-parts,
+  .project-card-desc-parts-img {
+    width: 50%;
+  }
+
+  /* CONTACTO */
+  .logosContact {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+  .contact-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* FOOTER */
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.6rem;
+  }
+
+  .footer-section p,
+  .footer-section ul li a {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 990px) {
+  .navbar-brand {
+    display: block !important;
+  }
+   .container {
+    flex-direction: row;
+  }
+}
+/* ================================
+   📱 MODO HORIZONTAL (MÓVIL TUMBADO)
+   Para pantallas bajas (landscape)
+   ================================ */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .navbar-brand {
+    display: block;
+  }
+  .container {
+    flex-direction: row;
+  }
+  /* Layout general */
+  body {
+    padding: 0;
+    overflow-y: auto;
+  }
+
+  #navP {
+    padding: 0.3rem 1rem;
+  }
+
+  /* HERO */
+  #photo-name {
+    flex-direction: row;
+    height: 70vh;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .name,
+  #typed {
+    font-size: 2.4rem;
+  }
+
+  .tech {
+    font-size: 1rem;
+  }
+
+  /* SOBRE MÍ */
+  .description-wrapper {
+    width: 90%;
+  }
+
+  .description-wrapper p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  /* Skills */
+  .mb-3 {
+    width: 70%;
+    padding: 10px;
+    flex-direction: row;
+  }
+
+  .skills-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* GRID tech */
+  .tech-logo {
+    width: 30%;
+  }
+
+  .tech-logo img {
+    max-height: 50px;
+  }
+
+  /* Proyectos */
+  .project-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card img {
+    max-width: 90%;
+  }
+
+  .project-card-desc {
+    flex-direction: row;
+  }
+
+  .project-card-desc-parts,
+  .project-card-desc-parts-img {
+    width: 50%;
+  }
+
+  /* Contacto */
+  .logosContact {
+    flex-wrap: nowrap;
+  }
+  .logosContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .contact-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Footer */
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.4rem;
+  }
+
+  .footer-section p,
+  .footer-section ul li a {
+    font-size: 0.9rem;
+  }
+  .footer-section {
+    width: 100%;
   }
 }
